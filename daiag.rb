@@ -5,21 +5,21 @@
 class Daiag < Formula
   desc "CLI tool for orchestrating AI agents through Starlark-defined workflows"
   homepage "https://github.com/nbykovsky/daiag"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nbykovsky/daiag/releases/download/v0.2.0/daiag_darwin_amd64.tar.gz"
-      sha256 "e55644c6c1f46148e4fbbec90b08ee3c916dabeb343f197b29c0e1e72bf46cf6"
+      url "https://github.com/nbykovsky/daiag/releases/download/v0.3.0/daiag_darwin_amd64.tar.gz"
+      sha256 "aa0a757f7ca28e3a09a5b0408c4c78db2815e6bcbbafe27b19434a2b1a56ccf3"
 
       define_method(:install) do
         bin.install "daiag"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nbykovsky/daiag/releases/download/v0.2.0/daiag_darwin_arm64.tar.gz"
-      sha256 "9332425faa9d454a5c5c475d1cd75ebc5e9af7a6abb67226ecbb8c421513873c"
+      url "https://github.com/nbykovsky/daiag/releases/download/v0.3.0/daiag_darwin_arm64.tar.gz"
+      sha256 "94db62d81fe4c3a284b34a4e8bb68bd3e99fac420f5d6caa7e39e89e56bfda9c"
 
       define_method(:install) do
         bin.install "daiag"
@@ -29,15 +29,15 @@ class Daiag < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nbykovsky/daiag/releases/download/v0.2.0/daiag_linux_amd64.tar.gz"
-      sha256 "d794173d66ed2deff4bc5d67fba863d26a7820efa9fd8b6ba31a26d96f551536"
+      url "https://github.com/nbykovsky/daiag/releases/download/v0.3.0/daiag_linux_amd64.tar.gz"
+      sha256 "708e52e4cfa5ab65d7304fdf706625938aada0fcc87f0df4b81a1356288d5ed9"
       define_method(:install) do
         bin.install "daiag"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nbykovsky/daiag/releases/download/v0.2.0/daiag_linux_arm64.tar.gz"
-      sha256 "814b083cc615da79754c7e38fcdd4f9840838093ac828b42ee965029861a4cde"
+      url "https://github.com/nbykovsky/daiag/releases/download/v0.3.0/daiag_linux_arm64.tar.gz"
+      sha256 "f87369ac4c2ba4c19abbc056d31dfd6fc377b3c3c4211834e5d92287f84dcee6"
       define_method(:install) do
         bin.install "daiag"
       end
